@@ -52,7 +52,7 @@ namespace tabuleiro
             return aux;
 
         }
-        public bool pisicaoValida(Posicao pos)
+        public bool posicaoValida(Posicao pos)
         {
             if (pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna >= Colunas){
                 return false;
@@ -61,7 +61,7 @@ namespace tabuleiro
         }
         public void validarPosicao(Posicao pos)
         {
-            if (!pisicaoValida(pos))
+            if (!posicaoValida(pos))
             {
                 throw new TabuleiroException("Posição inválida");
             }
